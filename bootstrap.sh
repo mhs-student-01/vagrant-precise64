@@ -92,7 +92,7 @@ tar jxvf /vagrant/phpmyadmin/phpMyAdmin.tar.bz2 -C /vagrant/myadm.localhost --st
 rm -rf /vagrant/phpmyadmin 2> /dev/null
 
 # configure phpmyadmin
-sed -i "s/IAidf85HCBEhbvqwbfvUIYREBCW927SWRHC35sUEYWRGt3/$PMABLOWFISHSECRET" /vagrant/conf/phpmyadmin.conf
+#sed -i "s/IAidf85HCBEhbvqwbfvUIYREBCW927SWRHC35sUEYWRGt3/$PMABLOWFISHSECRET" /vagrant/conf/phpmyadmin.conf
 echo "CREATE DATABASE pma" | mysql -uroot -p$MYSQLROOTPASSWORD
 echo "CREATE USER 'pma'@'localhost' IDENTIFIED BY '$PMAUSERPASSWORD'" | mysql -uroot -p$MYSQLROOTPASSWORD
 echo "GRANT ALL ON pma.* TO 'pma'@'localhost'" | mysql -uroot -p$MYSQLROOTPASSWORD
