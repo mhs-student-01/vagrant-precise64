@@ -34,7 +34,7 @@ sudo debconf-set-selections <<< "mysql-server mysql-server/root_password passwor
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $MYSQLROOTPASSWORD"
 sudo apt-get install -y mysql-server 2> /dev/null
 sudo apt-get install -y mysql-client 2> /dev/null
-
+sudo apt-get install -y php5-mysql 2> /dev/null
 if [ ! -f /var/log/dbinstalled ];
 then
     echo "CREATE USER '$MYSQLUSER'@'localhost' IDENTIFIED BY '$MYSQLUSERPASSWORD'" | mysql -uroot -p$MYSQLROOTPASSWORD
