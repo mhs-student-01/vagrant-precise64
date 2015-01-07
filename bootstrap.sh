@@ -69,6 +69,8 @@ then
 fi
 
 # restart apache
+sudo apt-get install php5-mysql libapache2-mod-php5
+
 sudo service apache2 reload 2> /dev/null
 
 # copy addwebsite command
