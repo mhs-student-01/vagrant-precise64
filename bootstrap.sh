@@ -105,5 +105,5 @@ cat /vagrant/conf/phpmyadmin.conf > /vagrant/myadm.localhost/config.inc.php
 
 # add the bash aliases
 cat /vagrant/conf/aliases >> ~/.bash_aliases
-
+sudo apt-get install libapache2-mod-php5
 # eof
